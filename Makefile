@@ -127,8 +127,8 @@ bin:
 	mkdir bin
 
 clean:
-	-@rm version debug sources 2>/dev/null || true
-	-@rm bin/MANIFEST.MF bin/mnemojojo.jar bin/mnemojojo.jad 2>/dev/null || true
+	-@rm -f version debug sources 2>/dev/null || true
+	-@rm -f bin/MANIFEST.MF bin/mnemojojo.jar bin/mnemojojo.jad 2>/dev/null || true
 	-@rmdir bin 2>/dev/null || true
 	-@find tmpclasses -name '*.class' -delete          2>/dev/null || true
 	-@find tmpclasses -depth -type d -exec rmdir {} \; 2>/dev/null || true
@@ -136,5 +136,5 @@ clean:
 	-@find classes -depth -type d -exec rmdir {} \;    2>/dev/null || true
 
 cleanall: clean
-	-@rm sources
+	-@rm -f sources
 
