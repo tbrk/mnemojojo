@@ -14,7 +14,7 @@ WTKDEVICE=DefaultColorPhone
 JAVAFILESYS=$(HOME)/j2mewtk/$(WTKVERSION)/appdb/$(WTKDEVICE)/filesystem
 
 # Mnemogogo library
-MNEMOGOGO=$(HOME)/.mnemosyne/plugins/mnemogogo/mnemogogo-j2me-1.2.4.jar
+MNEMOGOGO=$(HOME)/.mnemosyne/plugins/mnemogogo/mnemogogo-j2me-2.0.0.jar
 
 # Microemulator installation
 MICROEMU=/opt/microemulator
@@ -108,6 +108,7 @@ bin/MANIFEST.MF: version bin
 	@echo "MIDlet-Name: Mnemojojo" >> bin/MANIFEST.MF
 	@echo "MIDlet-Permissions: javax.microedition.io.Connector.file.read,\
 	javax.microedition.io.Connector.file.write" >> bin/MANIFEST.MF
+	@echo "Main-Class: FireMIDlet" >> bin/MANIFEST.MF
 	@echo "MIDlet-Vendor: Timothy Bourke" >> bin/MANIFEST.MF
 	@echo "MIDlet-Version: `cat version`" >> bin/MANIFEST.MF
 	@echo "MicroEdition-Configuration: CLDC-1.1" >> bin/MANIFEST.MF
