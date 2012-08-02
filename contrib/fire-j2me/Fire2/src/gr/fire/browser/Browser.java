@@ -1075,3 +1075,4 @@ public class Browser implements CommandListener, PageListener,ResponseHandler
 		return (htmlHandlerImageCache!=null)?(Image)htmlHandlerImageCache.get(id):null;
 	}
 }
+
