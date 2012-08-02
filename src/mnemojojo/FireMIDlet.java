@@ -319,7 +319,11 @@ public class FireMIDlet
     {
         try {
             if (blackberry) {
-                FireScreen.setTheme(new FireTheme("file://res/blackberry.properties"));
+                if (config.darkMode) {
+                    FireScreen.setTheme(new FireTheme("file://res/darkblackberry.properties"));
+                } else {
+                    FireScreen.setTheme(new FireTheme("file://res/blackberry.properties"));
+                }
 
             } else if (config.isBigScreen) {
                 if (config.darkMode) {
